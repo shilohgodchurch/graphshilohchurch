@@ -11,8 +11,6 @@ import (
 )
 
 // CreateMovie is the resolver for the createMovie field.
-// schema.resolvers.go
-
 func (r *mutationResolver) CreateMovie(ctx context.Context, input model.NewMovie) (*model.Movie, error) {
 	movie := model.Movie{
 		Title: input.Title,
@@ -28,8 +26,6 @@ func (r *mutationResolver) CreateMovie(ctx context.Context, input model.NewMovie
 }
 
 // Movies is the resolver for the movies field.
-// schema.resolvers.go
-
 func (r *queryResolver) Movies(ctx context.Context) ([]*model.Movie, error) {
 	var movies []*model.Movie
 
